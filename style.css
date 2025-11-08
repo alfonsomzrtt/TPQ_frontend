@@ -66,6 +66,88 @@ header {
   letter-spacing: 1px;
 }
 
+/* === KOTAK LOGIN/DAFTAR/LUPA === */
+.login-main {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e5909, #2e971e);
+}
+
+.login-box {
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px 40px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+  color: #f2f8c2;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #c6ff6b, #74c69d);
+  color: #2c2c2c;
+  font-weight: 700;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(198, 255, 107, 0.4);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #74c69d, #c6ff6b);
+  transform: translateY(-3px);
+}
+
+.login-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.login-links a {
+  color: #eaffd1;
+}
+
+.login-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* ===== Menu kanan ===== */
 .nav-right {
   display: flex;
@@ -849,203 +931,5 @@ header {
 .nav-links a:hover,
 .nav-links a.active {
   color: #c6ff6b;
-}
-
-/* ========== LOGIN PAGE ========== */
-.login-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px; /* biar tidak ketutup navbar */
-}
-
-.login-box {
-  background: #2e8b57;
-  padding: 40px 30px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.login-box h2 {
-  color: white;
-  margin-bottom: 25px;
-}
-
-/* Input */
-.login-box input[type="text"],
-.login-box input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-  color: #333;
-}
-
-.login-box input::placeholder {
-  color: #666;
-}
-
-/* Tombol */
-.submit-btn {
-  width: 100%;
-  background-color: white;
-  color: #2e8b57;
-  font-weight: 600;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #e7ffe9;
-}
-
-/* Link bawah */
-.login-links {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.login-links a {
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.login-links a:hover {
-  color: #a9f29c;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .login-box {
-    width: 90%;
-    padding: 30px;
-  }
-}
-/* ========== LOGIN PAGE (DESAIN BARU) ========== */
-.login-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px;
-  background: linear-gradient(135deg, #1e5909, #2e971e);
-}
-
-.login-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 50px 40px;
-  border-radius: 25px;
-  width: 90%;
-  max-width: 420px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Animasi masuk */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.login-box h2 {
-  color: #eaffd1;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
-
-/* Input username & password */
-.login-box input[type="text"],
-.login-box input[type="password"] {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 18px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-  font-size: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  transition: all 0.3s ease;
-}
-
-.login-box input:focus {
-  box-shadow: 0 0 10px #b8ff89;
-  transform: scale(1.02);
-}
-
-.login-box input::placeholder {
-  color: #777;
-}
-
-/* Tombol Login */
-.submit-btn {
-  width: 100%;
-  background: linear-gradient(135deg, #c6ff6b, #74c69d);
-  color: #2c2c2c;
-  font-weight: 700;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(198, 255, 107, 0.4);
-}
-
-.submit-btn:hover {
-  background: linear-gradient(135deg, #74c69d, #c6ff6b);
-  transform: translateY(-3px);
-}
-
-/* Link bawah (lupa password & daftar) */
-.login-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 20px;
-}
-
-.login-links a {
-  color: #eaffd1;
-  transition: 0.3s;
-}
-
-.login-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .login-box {
-    width: 90%;
-    padding: 35px 25px;
-  }
-
-  .login-box h2 {
-    font-size: 50px;
-  }
 }
 }

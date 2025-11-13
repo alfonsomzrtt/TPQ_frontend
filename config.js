@@ -3,5 +3,5 @@
 const SUPABASE_URL = "https://sqvhzvhakivoeqajxowh.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxdmh6dmhha2l2b2VxYWp4b3doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA5NTMzNTIsImV4cCI6MjA3NjUyOTM1Mn0.QiDgEH7djJO1-AKQeoeLKw4W8FjeudS77NPZJCHIlfs";
 
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-window.supabase = supabaseClient; // biar bisa diakses global
+
+window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);

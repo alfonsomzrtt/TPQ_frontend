@@ -1,6 +1,6 @@
 // Cek apakah user sudah login
 const user = JSON.parse(localStorage.getItem("user"));
-
+//katanya sih bisa mencegah browser pake chache
 window.onload = () => {
   if (!JSON.parse(localStorage.getItem("user"))) {
     window.location.href = "../login.html";

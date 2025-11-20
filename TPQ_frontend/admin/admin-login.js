@@ -1,6 +1,6 @@
 // admin-login.js
 import { API_BASE } from "../apiBase.js";
-
+//katanya sih bisa mencegah browser pake chache
 window.onload = () => {
     if (!JSON.parse(localStorage.getItem("user"))) {
       window.location.href = "../login.html";

@@ -1,6 +1,5 @@
 // admin-login.js
 import { API_BASE } from "../apiBase.js";
-//katanya sih bisa mencegah browser pake chache
 
 
 const form = document.getElementById("adminLoginForm");

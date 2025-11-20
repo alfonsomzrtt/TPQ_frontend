@@ -25,7 +25,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 }); */
 
-import { API_BASE } from "apiBase.js";
+import { API_BASE } from "./apiBase.js";
 
 
 const loginForm = document.getElementById("loginForm");

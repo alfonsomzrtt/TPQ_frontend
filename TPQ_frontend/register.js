@@ -1,5 +1,5 @@
 // handler untuk register.html
-import { API_BASE } from "apiBase.js";
+import { API_BASE } from "./apiBase.js";
 
 const form = document.getElementById("signupForm");
 

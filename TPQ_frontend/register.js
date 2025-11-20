@@ -1,4 +1,5 @@
 // handler untuk register.html
+import { API_BASE } from "../apiBase.js";
 
 const form = document.getElementById("signupForm");
 
@@ -33,7 +34,7 @@ form.addEventListener("submit", async (e) => {
 
 
   try {
-    const response = await fetch("http://localhost:3000/signup", {
+    const response = await fetch(`${API_BASE}/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -25,6 +25,9 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 }); */
 
+import { API_BASE } from "../apiBase.js";
+
+
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -40,7 +43,7 @@ if (loginForm) {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch(`${API_BASE}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

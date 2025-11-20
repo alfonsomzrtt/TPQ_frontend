@@ -1,6 +1,12 @@
 // admin-login.js
 import { API_BASE } from "../apiBase.js";
 
+window.onload = () => {
+    if (!JSON.parse(localStorage.getItem("user"))) {
+      window.location.href = "../login.html";
+    }
+  };
+
 const form = document.getElementById("adminLoginForm");
 
 if (form) {
@@ -37,6 +43,7 @@ try {
     return;
   }
 
+  
   // Simpan sesi admin
   localStorage.setItem("user", JSON.stringify(user));
 

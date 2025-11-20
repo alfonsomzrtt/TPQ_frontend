@@ -7,6 +7,12 @@ const SUPABASE_KEY =
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+window.onload = () => {
+  if (!JSON.parse(localStorage.getItem("user"))) {
+    window.location.href = "../login.html";
+  }
+};
+
 // Element Referensi
 const santriTable = document.getElementById("santriTable");
 const userTable = document.getElementById("userTable");

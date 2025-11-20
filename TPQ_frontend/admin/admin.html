@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin - TPQ Miftahul Jannah</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../gambar/LOGO.png" alt="Logo TPQ" />
+        <span class="logo-text">TPQ Miftahul Jannah</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+
+      </ul>
+    </header>
+
+    <main class="dashboard-container">
+      <h2 class="dashboard-title">
+        Dashboard Admin<br />Data Santri, Pengajar & Rekap Kehadiran
+      </h2>
+
+      <div class="dashboard-grid">
+
+        <!-- REKAP KEHADIRAN -->
+        <div class="card rekap">
+          <h3>Rekap Kehadiran Hari Ini</h3>
+          <p>Total Santri: <strong id="totalSantri">0</strong></p>
+          <p>Hadir: <strong id="hadirCount">0</strong></p>
+          <p>Izin: <strong id="izinCount">0</strong></p>
+          <p>Alfa: <strong id="alfaCount">0</strong></p>
+          <hr />
+          <p>Persentase Kehadiran: <strong id="persentase">0%</strong></p>
+          <button class="button-refresh" id="refreshBtn">Perbarui Rekap</button>
+        </div>
+
+        <!-- DATA PRESENSI (LOG ACTIVITY) -->
+        <div class="card">
+          <h3>Data Presensi Santri</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Kartu UID</th>
+                <th>Status</th>
+                <th>Waktu</th>
+              </tr>
+            </thead>
+            <tbody id="santriTable">
+              <tr><td colspan="5">Memuat data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DAFTAR USER SANTRI (ROLE_ID = 2) -->
+        <div class="card">
+          <h3>Daftar Santri</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Username</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="userTable">
+              <tr><td colspan="4">Memuat data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+    <!-- MODAL PASANG KARTU RFID -->
+    <div id="modalRFID" class="modal" style="display:none;">
+      <div class="modal-content">
+        <h3>Pasangkan Kartu RFID</h3>
+        <p id="modalUserName">(Nama Santri)</p>
+
+        <label>UID Kartu</label>
+        <input type="text" id="inputUID" />
+
+        <div class="modal-buttons">
+          <button id="btnSimpanUID">Simpan</button>
+          <button id="btnBatalUID">Batal</button>
+        </div>
+      </div>
+    </div>
+       <script src="../authGuard.js"></script>
+       <script type="module" src="admin.js"></script>
+
+
+
+  </body>
+</html>

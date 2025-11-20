@@ -1,0 +1,8 @@
+# .gitignore vscode
+.vscode/
+# Dependencies
+/node_modules
+# Environment Variables
+.env
+#Live server settings
+settings.json

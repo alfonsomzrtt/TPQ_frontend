@@ -1,5 +1,5 @@
 // admin-login.js
-import { API_BASE } from "./apiBase.js";
+import { API_BASE } from "..apiBase.js";
 
 const form = document.getElementById("adminLoginForm");
 

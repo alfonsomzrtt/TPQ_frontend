@@ -8,11 +8,16 @@ const SUPABASE_KEY =
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 //katanya sih bisa mencegah browser pake chache
-window.onload = () => {
-  if (!JSON.parse(localStorage.getItem("user"))) {
-    window.location.href = "../login.html";
-  }
-};
+
+  window.onload = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user || user.role_id !== 1) {
+      // pakai replace biar gak bisa di-back
+      location.replace("../admin-login.html");
+    }
+  };
+
+
 
 // Element Referensi
 const santriTable = document.getElementById("santriTable");

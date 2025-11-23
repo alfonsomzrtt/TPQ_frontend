@@ -91,23 +91,27 @@
         <button class="program-btn">Email</button>
         <p class="program-desc">
           ✉️ tpqmiftahuljannah@gmail.com
-        </p>
+        </p>  
       </div>
 
       <div class="program-item">
         <button class="program-btn">Formulir Kontak</button>
-        <form class="program-desc contact-form">
+        <form action="https://formsubmit.co/tpqmiftahuljannah@gmail.com" method="POST">
           <label>Nama:</label><br>
-          <input type="text" name="nama" placeholder="Masukkan nama Anda" required><br>
-
+          <input type="text" name="nama" placeholder ="Masukkan Nama Anda" required><br>
+        
           <label>Email:</label><br>
-          <input type="email" name="email" placeholder="Masukkan email Anda" required><br>
-
+          <input type="email" name="email" placeholder ="Masukkan email Anda" required><br>
+        
           <label>Pesan:</label><br>
-          <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea><br>
-
+          <textarea name="pesan" rows="4" placeholder="Tulis pesan anda..." required></textarea><br>
+        
           <button type="submit" class="submit-btn">Kirim Pesan</button>
-        </form>
+        
+          <!-- opsional, redirect setelah sukses -->
+          <input type="hidden" name="_next" value="https://tpq.pages.dev/kontak">
+          <input type="hidden" name="_subject" value="Pesan Baru dari Website TPQ">
+        </form>        
       </div>
     </div>
 

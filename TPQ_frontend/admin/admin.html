@@ -54,20 +54,24 @@
         <!-- DATA PRESENSI (LOG ACTIVITY) -->
         <div class="card">
           <h3>Data Presensi Santri</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Kartu UID</th>
-                <th>Status</th>
-                <th>Waktu</th>
-              </tr>
-            </thead>
-            <tbody id="santriTable">
-              <tr><td colspan="5">Memuat data...</td></tr>
-            </tbody>
-          </table>
+
+            <div class="table-responsive">
+              <table id = "tabelPresensi">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Kartu UID</th>
+                    <th>Status</th>
+                    <th>Waktu</th>
+                  </tr>
+                </thead>
+                <tbody id="santriTable">
+                  <tr><td colspan="5">Memuat data...</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
         </div>
 
         <!-- DAFTAR USER SANTRI (ROLE_ID = 2) -->

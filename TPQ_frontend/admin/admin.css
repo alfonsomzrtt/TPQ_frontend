@@ -197,36 +197,60 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  /* ===== BUTTON ===== */
-  .button-refresh {
-    margin-top: 10px;
-    padding: 8px 18px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #a3e635, #65a30d);
-    color: #064e14;
-    font-weight: 600;
-    cursor: pointer;
-    transition: filter 0.2s, transform 0.1s;
-  }
-  
-  .button-refresh:hover {
-    filter: brightness(1.2);
-    transform: scale(1.05);
-  }
-  
-  /* ===== REKAP CARD ===== */
-  .rekap p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-  }
-  
-  .rekap strong {
-    color: #bef264;
-  }
-  
-  /* ===== TABLE TRANSITION (anti flicker) ===== */
-  #santriTable tr {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
+/* ===== BUTTON ===== */
+.button-refresh {
+margin-top: 10px;
+padding: 8px 18px;
+border: none;
+border-radius: 25px;
+background: linear-gradient(135deg, #a3e635, #65a30d);
+color: #064e14;
+font-weight: 600;
+cursor: pointer;
+transition: filter 0.2s, transform 0.1s;
+}
+
+.button-refresh:hover {
+filter: brightness(1.2);
+transform: scale(1.05);
+}
+
+/* ===== REKAP CARD ===== */
+.rekap p {
+margin: 5px 0;
+font-size: 0.95rem;
+}
+
+.rekap strong {
+color: #bef264;
+}
+
+/* ===== TABLE TRANSITION (anti flicker) ===== */
+#santriTable tr {
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== RESPONSIVE TABLE FIX (MOBILE) ===== */
+.table-responsive {
+width: 100%;
+overflow-x: auto;
+}
+
+.table-responsive table {
+width: 100%;
+table-layout: auto;
+}
+
+.table-responsive td,
+.table-responsive th {
+white-space: normal !important;
+word-break: break-word;
+}
+
+/* Khusus kolom 'Waktu' di Dashboard */
+#tabelPresensi td:nth-child(5),
+#tabelPresensi th:nth-child(5) {
+max-width: 120px;
+white-space: normal !important;
+word-break: break-word;
+}

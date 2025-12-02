@@ -91,7 +91,7 @@ app.post("/login", async (req, res) => {
 
   const { data: users, error } = await supabase
     .from("users")
-    .select("*")
+    .select("id, fullname, email, password_hash, role_id, is_active")
     .eq("email", email)
     .limit(1);
 
@@ -104,7 +104,11 @@ app.post("/login", async (req, res) => {
   if (!user) {
     return res.status(401).json({ message: "Email tidak ditemukan" });
   }
-
+  
+  if (!user.is_active) {
+    return res.status(403).json({ message: "Akun tidak aktif" });
+  }
+  
   const validPassword = await bcrypt.compare(password, user.password_hash);
   if (!validPassword) {
     return res.status(401).json({ message: "Password salah" });

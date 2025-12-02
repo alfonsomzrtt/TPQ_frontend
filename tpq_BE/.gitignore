@@ -6,3 +6,5 @@
 .env
 #Live server settings
 settings.json
+#pengajar
+/pengajar

@@ -8,6 +8,13 @@
     <meta http-equiv="Expires" content="0">
         <title>Dashboard Admin - TPQ Miftahul Jannah</title>
     <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="hafalan.css">
+    <link href="https://cdn.jsdelivr.net/npm/slim-select@2.7.0/dist/slimselect.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/slim-select@2.7.0/dist/slimselect.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
   </head>
 
   <body>
@@ -17,12 +24,15 @@
         <span class="logo-text">TPQ Miftahul Jannah</span>
       </div>
       <ul class="nav-links">
+        <a id="btnDashboard" class="nav-tab active">Dashboard</a>
+        <a id="btnHafalan" class="nav-tab">Hafalan</a>
         <li><a href="#" id="logoutBtn">Logout</a></li>
+
 
       </ul>
     </header>
 
-    <main class="dashboard-container">
+    <div id="dashboardContainer" class="dashboard-container">
       <h2 class="dashboard-title">
         Dashboard Admin<br />Data Santri, Pengajar & Rekap Kehadiran
       </h2>
@@ -77,7 +87,73 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
 
+    <div id="hafalanContainer" class="dashboard-container" style="display:none;">
+      <h1 class="hafalan-title">Hafalan Santri</h1>
+  
+      <!-- A. List Santri
+      <div class="card-hafalan">
+        <h2>Daftar Santri</h2>
+        <ul id="santriList" class="list-santri"></ul>
+      </div> -->
+    
+      <!-- B. Form Input Hafalan -->
+      <div class="card-hafalan">
+        <h2>Tambah Hafalan</h2>
+    
+        <label>Nama Santri</label>
+        <select id="inputSantri"></select>
+    
+        <label>Nama Surat</label>
+        <select id="inputSurat"></select>
+    
+        <label>Tanggal Input</label>
+        <input type="date" id="inputTanggal">
+    
+        <button class="btn-hijau" id="btnTambah">Tambah Hafalan</button>
+      </div>
+    
+      <!-- C. Tabel Hafalan -->
+      <div class="card-hafalan">
+        <h2>Data Hafalan</h2>
+        <table class="tabel-hafalan">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Santri</th>
+              <th>Jumlah Surat</th>
+              <th>Detail Surat</th>
+            </tr>
+          </thead>
+          <tbody id="tabelHafalan"></tbody>
+        </table>
+      </div>
+
+      <!-- modal pop-up hafalan -->
+      <div id="detailModal" class="modal-detail" style="display:none;">
+        <div class="modal-content-detail">
+          <h2 id="detailNama"></h2>
+      
+          <table class="detail-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Surat</th>
+                <th>Tanggal</th>
+              </tr>
+            </thead>
+            <tbody id="detailBody"></tbody>
+          </table>
+      
+          <button id="closeDetail" class="btn-close-detail">Tutup</button>
+        </div>
+      </div>
+      
+    
+    </div>
+    
 
 
     <!-- MODAL PASANG KARTU RFID -->

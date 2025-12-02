@@ -341,3 +341,34 @@ logoutBtn.addEventListener("click", () => {
   // Redirect ke login page
   window.location.href = "../admin/admin-login.html";
 })};
+
+
+
+const btnDashboard = document.getElementById("btnDashboard");
+const btnHafalan = document.getElementById("btnHafalan");
+const dashboardContainer = document.getElementById("dashboardContainer");
+const hafalanContainer = document.getElementById("hafalanContainer");
+
+let hafalanLoaded = false;
+
+btnDashboard.addEventListener("click", () => {
+    btnDashboard.classList.add("active");
+    btnHafalan.classList.remove("active");
+
+    dashboardContainer.style.display = "block";
+    hafalanContainer.style.display = "none";
+});
+
+btnHafalan.addEventListener("click", async () => {
+    btnHafalan.classList.add("active");
+    btnDashboard.classList.remove("active");
+
+    dashboardContainer.style.display = "none";
+    hafalanContainer.style.display = "block";
+
+    // Load hafalan.js hanya sekali
+    if (!hafalanLoaded) {
+        await import("./hafalan.js");
+        hafalanLoaded = true;
+    }
+});

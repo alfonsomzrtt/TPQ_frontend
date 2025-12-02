@@ -1,0 +1,378 @@
+#hafalanContainer {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #1a4710;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #bbf7d0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #d1fae5;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #a7f3d0;
+  border-bottom: 2px solid #a7f3d0;
+}
+
+/* === GLOBAL FIX: hilangkan background putih === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #174d0b, #2e971e);
+  color: #f0fdf4;
+}
+
+/* === HAFALAN PAGE === */
+.hafalan-container {
+  max-width: 900px; /* DIPERKECIL supaya tidak melebar */
+  margin: 0 auto;
+  padding: 25px 15px; /* padding dikecilkan */
+}
+
+/* Judul halaman */
+.hafalan-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ecfccb;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 35px;
+}
+
+/* === CARD === */
+#hafalanContainer .card-hafalan {
+  background: #1f5c15;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  margin-bottom: 35px;
+  transition: 0.2s;
+  width: 100%;
+  box-sizing: border-box; /* PENTING: cegah overflow input */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* jarak antar elemen */
+}
+
+#hafalanContainer label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+#hafalanContainer .card-hafalan:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+}
+
+#hafalanContainer .card-hafalan h2 {
+  background: #4e944f;
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #dcfce7;
+  margin-bottom: 18px;
+}
+
+/* === LIST SANTRI === */
+#hafalanContainer .list-santri li {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  color: #e0ffe5;
+  border-left: 5px solid #65a30d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  list-style: none; /* ilangin bullet */
+}
+
+/* === INPUT & SELECT === */
+#hafalanContainer .card-hafalan input,
+#hafalanContainer .card-hafalan select {
+  width: 100%;
+  max-width: 100%; /* super fix anti overflow */
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e6ffe8;
+  height: 42px; /* diseragamkan */
+  box-sizing: border-box; /* sangat penting */
+}
+
+#hafalanContainer .card-hafalan input::placeholder {
+  color: #bceccb;
+}
+
+/* === FIX KHUSUS INPUT DATE === */
+#hafalanContainer .card-hafalan input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0 14px;
+  height: 42px !important;
+  line-height: 42px;
+  color-scheme: dark; /* bikin picker gelap */
+}
+
+/* === BUTTON === */
+#hafalanContainer .btn-hijau {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, #a3e635, #65a30d);
+  color: #064e14;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#hafalanContainer .btn-hijau:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}
+
+/* === TABLE === */
+#hafalanContainer .tabel-hafalan {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+#hafalanContainer .tabel-hafalan th {
+  background: rgba(255, 255, 255, 0.08);
+  color: #bef264;
+  padding: 10px 14px;
+}
+
+#hafalanContainer .tabel-hafalan td {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #f0fdf4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#hafalanContainer .tabel-hafalan tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#hafalanContainer .ss-main {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #e6ffe8 !important;
+  border-radius: 8px !important;
+  min-height: 42px;
+}
+
+#hafalanContainer .ss-main .ss-arrow {
+  border-color: #c4eabc !important;
+}
+
+#hafalanContainer .ss-list {
+  background: #1f5c15 !important;
+  color: #e6ffe8 !important;
+}
+
+#hafalanContainer .ss-option:hover {
+  background: #3a8130 !important;
+}
+
+#hafalanContainer .ss-option.ss-selected {
+  background: #65a30d !important;
+  color: #fff !important;
+}
+
+#hafalanContainer .flatpickr-calendar {
+  background: #1f5c15 !important;
+  color: #ecfccb !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
+}
+
+#hafalanContainer .flatpickr-months,
+#hafalanContainer .flatpickr-weekday {
+  color: #e6ffe8 !important;
+}
+
+#hafalanContainer .flatpickr-day {
+  color: #fff !important;
+}
+
+#hafalanContainer .flatpickr-day:hover {
+  background: #3a8130 !important;
+}
+
+#hafalanContainer .flatpickr-day.selected {
+  background: #65a30d !important;
+  border-color: #65a30d !important;
+  color: #fff !important;
+}
+
+#hafalanContainer input[readonly].flatpickr-input {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #e6ffe8 !important;
+  border-radius: 8px;
+}
+
+#hafalanContainer #inputTanggal {
+  width: 100%;
+  display: block;
+}
+
+#hafalanContainer #btnTambah {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#hafalanContainer .modal-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+#hafalanContainer .modal-detail.show {
+  opacity: 1;
+  pointer-events: all;
+
+}
+
+#hafalanContainer .modal-content-detail {
+  background: #1f5c15;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* visible state */
+#hafalanContainer .modal-detail.show .modal-content-detail {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+#hafalanContainer .detail-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+#hafalanContainer .detail-table th,
+#hafalanContainer .detail-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#hafalanContainer .btn-detail {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #4e944f;
+  color: #fff;
+  cursor: pointer;
+}
+
+#hafalanContainer .btn-detail:hover {
+  filter: brightness(1.2);
+}
+
+#hafalanContainer .btn-close-detail {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #a3e635;
+  color: #064e14;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* .input-search {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+.santri-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.santri-list li {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 6px;
+    color: white;
+} */

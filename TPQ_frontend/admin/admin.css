@@ -23,6 +23,38 @@
     top: 0;
     z-index: 10;
   }
+
+  /* ===== NAVBAR TABS (Dashboard / Hafalan / Logout) ===== */
+.top-nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-tab {
+  cursor: pointer;
+  color: #d1fae5;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-tab:hover {
+  color: #a7f3d0;
+}
+
+.nav-tab.active {
+  color: #a7f3d0;
+  border-bottom: 2px solid #a7f3d0;
+}
+
+.logout {
+  color: #ffdddd;
+}
+.logout:hover {
+  color: white;
+}
+
   
   .logo {
     display: flex;

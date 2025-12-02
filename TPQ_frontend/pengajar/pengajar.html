@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pengajar - TPQ Miftahul Jannah</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="pengajar.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../gambar/LOGO.png" alt="Logo TPQ" class="logo-img" />
+        <span class="logo-text">TPQ Miftahul Jannah</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../tentangkami.html">Tentang Kami</a></li>
+        <li><a href="../program.html">Program</a></li>
+        <li><a href="../kontak.html">Kontak</a></li>
+        <li><a href="pengajar.html" class="active">Pengajar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== DASHBOARD CONTENT ===== -->
+  <main class="dashboard-container">
+    <h2 class="dashboard-title">Dashboard Pengajar</h2>
+    <p class="dashboard-subtitle">Selamat datang, <strong id="teacherName">Ustadz/Ah</strong>. Berikut data kelas dan kehadiran Anda.</p>
+
+    <div class="dashboard-grid">
+
+      <!-- Data Kelas yang Dipegang -->
+      <div class="card">
+        <h3>Kelas yang Dipegang</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Kelas</th>
+              <th>Jumlah Santri</th>
+              <th>Materi</th>
+            </tr>
+          </thead>
+          <tbody id="kelasTable">
+            <tr>
+              <td>1</td>
+              <td>Iqra 3</td>
+              <td>10</td>
+              <td>Iqra Jilid 3</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Al-Qur'an 1</td>
+              <td>8</td>
+              <td>Surah Al-Baqarah 1–10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Daftar Santri -->
+      <div class="card">
+        <h3>Daftar Santri</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Santri</th>
+              <th>Kelas</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="santriTable">
+            <tr><td>1</td><td>Ahmad Fauzi</td><td>Iqra 3</td><td>Hadir</td></tr>
+            <tr><td>2</td><td>Siti Rahma</td><td>Al-Qur'an 1</td><td>Izin</td></tr>
+            <tr><td>3</td><td>Muhammad Rafi</td><td>Iqra 4</td><td>Hadir</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Kehadiran Pengajar -->
+      <div class="card rekap">
+        <h3>Rekap Kehadiran Pengajar</h3>
+        <p>Hari ini: <strong>Hadir</strong></p>
+        <p>Bulan ini: <strong>23 Hari Hadir / 25 Hari</strong></p>
+        <p>Persentase Kehadiran: <strong>92%</strong></p>
+        <button class="button-refresh">Perbarui Data</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ambil data nama dari localStorage kalau ada
+    const userData = JSON.parse(localStorage.getItem("user"));
+    if (userData && userData.fullname) {
+      document.getElementById("teacherName").textContent = userData.fullname;
+    }
+  </script>
+</body>
+</html>

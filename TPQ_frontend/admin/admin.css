@@ -254,3 +254,26 @@ max-width: 120px;
 white-space: normal !important;
 word-break: break-word;
 }
+
+/* ===== NAVBAR RESPONSIVE (MOBILE) ===== */
+@media (max-width: 600px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar .logo {
+    font-size: 18px;   /* lebih kecil biar manis */
+    line-height: 22px;
+  }
+
+  .navbar .menu {
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+  }
+}
